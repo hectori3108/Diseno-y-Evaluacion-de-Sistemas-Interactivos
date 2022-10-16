@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://d3js.org/d3.v6.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var escalaLineal = d3.scaleLinear([20, 89], [0, 350]);
+        console.log('Salida para 20: ' + escalaLineal(20)); 
+        // Prueba rangeRound
+        console.log('Salida para 65: ' + escalaLineal(65));
+        escalaLineal.rangeRound([0, 350]);
+        console.log('Salida para 65 round: ' + escalaLineal(65));
+        // Prueba clamp con un dato fuera de dominio
+        console.log('Fuera dominio: ' + escalaLineal(10));
+        escalaLineal.clamp(true);
+        console.log('Fuera dominio clamp: ' + escalaLineal(10));
+    </script>
+</body>
+</html>

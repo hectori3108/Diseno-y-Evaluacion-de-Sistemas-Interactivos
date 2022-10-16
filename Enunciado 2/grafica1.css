@@ -1,0 +1,41 @@
+#div1 {
+       height: 400px;
+       width: 800px;
+       border: 1px solid black
+       }
+
+#div2 {
+       height: 400px;
+       width: 600px;
+       border: 1px solid black;
+       float: left;
+       overflow: hidden;
+       }
+
+#div3 {
+       height: 150px;
+       width: 100px;
+       border-right: 40px solid rgb(255, 255, 255);
+       border-top: 100px solid rgb(255, 255, 255);;
+       float: right;
+       }
+
+#img1 {
+       height: 350px;
+       width: 600px;
+       display: block;
+       }
+
+#img2 {
+       height: 150px;
+       width: 100px;
+       display: block;
+}
+
+#img3  {
+        height: 50px;
+        width: 500px;
+        display: block;   
+        border-left: 40px solid rgb(255, 255, 255);
+
+    }

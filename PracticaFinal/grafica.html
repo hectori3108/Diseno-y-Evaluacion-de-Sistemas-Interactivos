@@ -1,0 +1,81 @@
+<!--CODIGO REALIZADO POR HECTOR TORIBIO GONZALEZ-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfica</title>
+    <script src="http://d3js.org/d3.v5.min.js"></script> 
+
+</head>
+
+<!--Definimos el estilo del gráfiico, el tamaño de la letra, la opacidad, el borde, el color de las lineas...-->
+<style>
+    
+    body {
+     font: 15px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+     fill: none;
+     stroke: #000;
+     shape-rendering: crispEdges;
+    }
+
+    .grid .tick line {
+     stroke: lightgrey;
+     opacity: 0.7;
+    }
+    
+    .grid path {
+     stroke-width: 0;
+    }
+
+    .x.axis path {
+     display: none;
+     font: 14px sans-serif;
+    }
+
+    .axis{
+        font: 14px sans-serif;
+    }
+    </style>
+<body>
+        <!--Añadimos los bloques para las imágenes de los glóbulos junto con las propias imágenes-->
+        <div id="imagenes" style="position:absolute; top:60px; left:1500px; z-index:0; opacity: .8">
+            <div id="imgn">
+                <img src = "pngwing.com.png" id="img1" style="width: 150px; height: 150px;"></button>
+                <img src = "pngwing.com.png" id="img2" style="width: 150px; height: 150px;transform: translateY(50%)"></button>
+                <img src = "pngwing.com.png" id="img2" style="width: 150px; height: 150px;"></button>
+            </div>
+        </div>
+
+        <!--Añadimos bloques para los botones y los propios botones, les hacemos transparentes para que se vea la foto, pero hacemos el texto bisible -->
+        <div id="botones" style="width: 280px; height: 280px; position:absolute; top:70px; left:1516px; z-index:0">
+                <button id="data1" style="width: 120px; height: 40px; transform: translateX(100%);transform: translateY(90%);background-color: Transparent;
+                border: transparent;
+                cursor:pointer;
+                font: Candara;font-size: large;color:whitesmoke;">HOMBRES</button>
+                <button id="data2" style="width: 120px; height: 40px;margin-right:50px;transform: translateY(380%);background-color: Transparent;
+                border: transparent;
+                cursor:pointer;
+                font: Candara;font-size: large;color:whitesmoke;">MUJERES</button>
+              
+                <button id="data3" style="width: 120px; height: 40px;margin-left:155px;margin-top: -200px;transform: translateY(120%);background-color: Transparent;
+                border: transparent;
+                cursor:pointer;
+                font: Candara;font-size: large;color:whitesmoke;">CONJUNTO</button>
+                    
+    
+        </div>
+        <!--Añadimos el bloque para el gráfico de tarta con el canvas y el bloque para la leyenda-->
+        <div id="tarta" style="width: 400px; height: 300px; position:absolute; top:70px; left:300px; z-index:0">
+            <canvas id="canvasgraph" style="padding-left: 200px; padding-top: 100px;transform: translateY(-10%);"></canvas>
+            <div id="leyenda" style="width: 150px;height: 36px; padding-left: 30px; transform: translateY(-370%); font-size: large; font-family: 1em Monaco; font-weight: bold;"></div>
+        </div>
+    
+        <!--Llamamos al javascript-->
+    <script src="source.js"></script>
+
+</body>
+</html>

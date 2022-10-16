@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <h1> Ejercicio 7</h1>
+    <script src = "https://d3js.org/d3.v6.min.js"></script>
+    </head>
+
+   
+    <body>
+        <h2 style="font-weight:bold;"> Primer grafico</h2>
+        <svg width="300" height="350"></svg>
+        
+       
+       
+            <svg width="350" height="350"></svg>
+            <script src="http://d3js.org/d3.v3.min.js", type="text/javascript"></script>
+            <script>
+               
+            var datos = [50, 23, 93];
+             var config = { columnWidth: 35, columnGap: 25, margin: 10, height: 160, padding :{top: 20,right: 20,bottom: 20,left: 20},
+             rectStep : 45 , clases : ["Clase1","Clase2","Clase3"], color: ["red", "green", "blue"]};
+ 
+             d3.select("svg")
+                 .selectAll("rect")
+                .data(datos)
+                 .enter().append("rect")
+                 
+                 .attr('x', function (d, i) {
+            // posición de relleno izquierdo de svg de cada rectángulo
+            return config.padding.left + i * config.rectStep
+          })
+          // Establece la coordenada y del rectángulo
+          .attr('y', function (d) {
+            return config.height - config.padding.bottom - d;
+          })
+          .attr("width", config.columnWidth)
+                 .attr("height", function(d,i) { return d })
+
+                .attr("fill", function(d, i){
+                    return config.color[i]
+                })
+                /*
+            d3.select("svg")
+                .selectAll('text')
+            */
+            svg = d3.select("svg")
+            let text = svg.selectAll('text')
+            // enlazar datos
+          .data(datos)
+            // Obtenga la parte enter
+          .enter()
+            // Agregar un elemento de texto con la misma longitud que la matriz enlazada
+          .append('text')
+            // Establecer color de relleno de texto
+          .attr('fill', 'black')
+            // Establecer el tamaño de fuente
+          .attr('font-size', '14px')
+            // Establecer el texto en el medio del rectángulo más tarde 
+          .attr('text-anchor', 'middle')
+            // Establece x para que sea igual que el rectángulo
+          .attr('x', function (d, i) {
+            return config.padding.left + i * config.rectStep;
+          })
+            // establece y para que sea el mismo que el rectángulo
+          .attr('y', function (d) {
+            return config.height - config.padding.bottom -d;
+          })
+          .attr('dx', config.rectWidth / 2)
+          .attr('dy', '1em')
+            // texto de salida
+          .text(function (d) {
+              return d;
+            });
+
+                
+            
+                
+</script>
+    </body>
+</html>
