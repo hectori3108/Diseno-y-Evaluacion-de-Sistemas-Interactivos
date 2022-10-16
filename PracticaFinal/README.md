@@ -2,4 +2,4 @@ Aplicación web hecha con html y javaScript que muestra distintas gráficas sobr
 Se puede poner la app en funcionamiento con el documento "grafica.html". Es recomendable arrancarla en mozilla firefox, ya que otros navegaadores no soportan
 algunas características del proyecto y no le hacen funcionar.
 
-Los datos para la realización del trabajo han sido obtenidos de Kaggle
+Los datos para la realización del trabajo han sido obtenidos de Kaggle, toda la información se puede ver en el informe final.
